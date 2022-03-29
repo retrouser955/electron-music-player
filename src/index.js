@@ -89,12 +89,18 @@ async function setActivity() {
   let songState = store.get('songState')
   mainWindow.webContents
   client.setActivity({
-      details: songName,
+      details: songName || "Music Idle",
       state: 'Listening',
       largeImageKey: 'retro_player_530x530',
-      largeImageText: 'Listening to music',
+      largeImageText: 'Retro Player 1.3.0',
       smallImageKey: songState[1],
-      smallImageText: songState[0]
+      smallImageText: songState[0],
+      buttons: [
+        {
+            label: "Github Repo",
+            url: "https://github.com/retrouser955/electron-music-player"
+        }
+      ]
   });
 }
 client.on('ready', () => {
