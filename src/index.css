@@ -1,0 +1,52 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem;
+  background-image: linear-gradient(pink, white);
+  background-repeat: no-repeat;
+}
+.col {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.col img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.controls::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.circle-photo {
+  border-radius: 50%;
+}
+.progress-container {
+  background: rgb(122, 122, 122);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+.progress-bar {
+  background-color: #000000;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+.music-buttons img {
+  cursor: pointer;
+}
+.music-buttons i {
+  cursor: pointer;
+}
+#volume {
+  padding-left: 130px;
+  padding-right: 130px;
+}
