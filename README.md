@@ -9,7 +9,7 @@ Run `yarn start`
 
 # Turning the project into an executable (.exe file)
 
-Download [node.js](https://nodejs.org/en/) and yarn (using `npm install --global yarn`)
+Download [node.js](https://nodejs.org/en/) from their website and yarn using `npm install --global yarn`
 
 After you finished running the project, you can turn it into an executable.  
 Run `yarn run make`  
