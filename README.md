@@ -17,3 +17,8 @@ Go into the `out` Folder
 Go into make -> squirrel.windows (for windows) -> x64 (for windows) -> Run `retro-player-1.0.0 Setup.exe`
 
 Note: window defender might say it's a virus because I am not a verified publisher.
+
+#Credits
+
+1. [bradtraversy/vanillawebprojects/music-player](https://github.com/bradtraversy/vanillawebprojects/tree/master/music-player)
+2. [ytb2mp3/youtube-mp3-downloader](https://github.com/ytb2mp3/youtube-mp3-downloader#readme)
