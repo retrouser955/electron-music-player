@@ -1,6 +1,13 @@
 # electron-music-player
 A Powerful Music Player made with electron framework with HTML CSS and JAVASCRIPT 🔥
 
+# Features
+
+🔥 High quality audio  
+🔻 Download YouTube Videos  
+🌌 Discord RPC  
+🎵 Import your own songs
+
 # Running the Project
 Clone this repo with the command `git clone https://github.com/retrouser955/electron-music-player.git` in Terminal  
 Add a song in the src/songs folder  
