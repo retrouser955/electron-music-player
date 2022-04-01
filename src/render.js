@@ -1,5 +1,6 @@
 const audio = document.getElementById('audio');
 //importing audio
+const errorHandler = require(`${__dirname}/ytAndDiscordRPC.js`)
 const Store = require('electron-store')
 //importing electron store
 const ms = require('ms')
@@ -158,33 +159,17 @@ downloadBtn.addEventListener('click', async () => {
     var ytProgressToast = new bootstrap.Toast(ytProgress)
     ytProgressToast.show()
     download(id)
+    var downloadedSongToast = document.getElementById('liveToastDownloadSuccess')
+    var downloadedToast = new bootstrap.Toast(downloadedSongToast)
+    errorHandler.yDevent(YD, files, ytProgressToast, downloadedToast)
     
-    YD.on("finished", function(err, data) {
-        files = []
-        let newFiles = fs.readdirSync(`${__dirname}/songs`).filter(file => file.endsWith('.mp3'))
-        for(const songs of newFiles) {
-            let songDisplayName;
-            songDisplayName = textReplace(songs, '.mp3', '')
-            songDisplayName = textReplace(songDisplayName, '_', ' ')
-            files.push({
-                name: `${__dirname}/songs/${songs}`,
-                thumbnail: `${__dirname}/image/record.png`,
-                displayName: `${songDisplayName}`
-            })
-        }
-        i = i++
-        ytProgressToast.hide()
-        wait(5000)
-        var downloadedSongToast = document.getElementById('liveToastDownloadSuccess')
-        var downloadedToast = new bootstrap.Toast(downloadedSongToast)
-        downloadedToast.show()
-    });
 })
 //downloading yt
 var toast = new bootstrap.Toast(toastLiveExample)
 const openFile = () => {
     shell.openPath(`${__dirname}/songs`)
 }
+
 //open your song files
 icon.addEventListener('click', openFile)
 //same thing
@@ -192,8 +177,5 @@ toast.hide()
 //hiding the toast
 wait(4000)
 //waiting 4000 ms idk why i put this
-
-if(error === true) {
-    toast.show()
-}
+errorHandler.errorModule(error)
 //error discord rpc checker

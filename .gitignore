@@ -2,3 +2,5 @@
 node_modules/
 # lock File
 yarn.lock
+# song File
+src/songs/
