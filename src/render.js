@@ -24,14 +24,11 @@ const skip = document.getElementById('skip')
 const back = document.getElementById('back')
 const progress = document.getElementById('progress-bar');
 const progressContainer = document.getElementById('progress-container');
-const events = require('events')
-const eventEmitter = new events.EventEmitter()
 const songTitle = document.getElementById('music-title')
 const volume = document.getElementById('volume')
 play.classList.remove('play')
 const store = new Store()
 const fs = require('fs')
-const  image_finder  =  require("image-search-engine")
 let files = store.get('files')
 let error = store.get('error')
 let i = 0
