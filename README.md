@@ -27,6 +27,14 @@ Go into make -> squirrel.windows (for windows) -> x64 (for windows) -> Run `retr
 
 Note: window defender might say it's a virus because I am not a verified publisher.
 
+# Screenshots
+
+![Retro Player No Music Playing](./readme-images/retro-player-idle.png)
+
+![Grass Animals Heat Waves playing](./readme-images/heat-waves.png)
+
+![Discord RPC](./readme-images/Discord-RPC.png)
+
 # Credits
 
 1. [bradtraversy/vanillawebprojects/music-player](https://github.com/bradtraversy/vanillawebprojects/tree/master/music-player)
